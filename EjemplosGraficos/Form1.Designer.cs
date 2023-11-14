@@ -44,15 +44,27 @@
             tabPage3 = new TabPage();
             label4 = new Label();
             button4 = new Button();
+            tabPage4 = new TabPage();
+            label8 = new Label();
+            button7 = new Button();
+            tabPage5 = new TabPage();
+            label9 = new Label();
+            button8 = new Button();
             label5 = new Label();
             label6 = new Label();
             button5 = new Button();
             button6 = new Button();
             label7 = new Label();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label10 = new Label();
+            label11 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             tabPage2.SuspendLayout();
             tabPage3.SuspendLayout();
+            tabPage4.SuspendLayout();
+            tabPage5.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -60,6 +72,8 @@
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
             tabControl1.Controls.Add(tabPage3);
+            tabControl1.Controls.Add(tabPage4);
+            tabControl1.Controls.Add(tabPage5);
             tabControl1.Location = new Point(-1, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -215,6 +229,69 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // tabPage4
+            // 
+            tabPage4.Controls.Add(label8);
+            tabPage4.Controls.Add(button7);
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(458, 235);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Listas";
+            tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(225, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 15);
+            label8.TabIndex = 1;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(78, 47);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 23);
+            button7.TabIndex = 0;
+            button7.Text = "Mostrar";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // tabPage5
+            // 
+            tabPage5.Controls.Add(label11);
+            tabPage5.Controls.Add(label10);
+            tabPage5.Controls.Add(textBox2);
+            tabPage5.Controls.Add(textBox1);
+            tabPage5.Controls.Add(label9);
+            tabPage5.Controls.Add(button8);
+            tabPage5.Location = new Point(4, 24);
+            tabPage5.Name = "tabPage5";
+            tabPage5.Size = new Size(458, 235);
+            tabPage5.TabIndex = 4;
+            tabPage5.Text = "Parse";
+            tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(142, 152);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 15);
+            label9.TabIndex = 1;
+            label9.Text = "label9";
+            // 
+            // button8
+            // 
+            button8.Location = new Point(223, 104);
+            button8.Name = "button8";
+            button8.Size = new Size(75, 23);
+            button8.TabIndex = 0;
+            button8.Text = "Sumar";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -260,6 +337,38 @@
             label7.Size = new Size(0, 15);
             label7.TabIndex = 5;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(198, 35);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(100, 23);
+            textBox1.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(198, 71);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 3;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(141, 36);
+            label10.Name = "label10";
+            label10.Size = new Size(45, 15);
+            label10.TabIndex = 4;
+            label10.Text = "Num A";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(142, 74);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 15);
+            label11.TabIndex = 5;
+            label11.Text = "Num B";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -280,6 +389,10 @@
             tabPage2.PerformLayout();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
+            tabPage4.ResumeLayout(false);
+            tabPage4.PerformLayout();
+            tabPage5.ResumeLayout(false);
+            tabPage5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -307,5 +420,15 @@
         private Button button5;
         private Button button6;
         private Label label7;
+        private TabPage tabPage4;
+        private Button button7;
+        private Label label8;
+        private TabPage tabPage5;
+        private Label label9;
+        private Button button8;
+        private Label label11;
+        private Label label10;
+        private TextBox textBox2;
+        private TextBox textBox1;
     }
 }

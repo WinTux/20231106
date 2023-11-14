@@ -136,7 +136,7 @@ namespace EjemplosGraficos
             per.nombre = "";
             per.edad = 80;
             manipuladorDeObjetoPersona(per);
-            label7.Text = string.Format("{0} tiene {1} años con estatura {2}",per.nombre,per.edad,per.estatura);
+            label7.Text = string.Format("{0} tiene {1} años con estatura {2}", per.nombre, per.edad, per.estatura);
         }
 
         private void manipuladorDeObjetoPersona(Persona p)
@@ -144,6 +144,64 @@ namespace EjemplosGraficos
             p.edad = 90;
             p.nombre = "Samantha";
             p.estatura = 1.63;
+        }
+
+        private void usandoListas()
+        {
+            List<string> listaPersona = new List<string>();
+            Persona persona = new Persona
+            {
+                edad = 20,
+                nombre = "Samantha",
+                estatura = 1.6
+            };
+
+            Persona persona2 = new Persona
+            {
+                edad = 20,
+                nombre = "Samantha",
+                estatura = 1.6
+            };
+            listaPersona.Add(persona + "");
+            listaPersona.Add(persona + "");
+            listaPersona.Add(persona + "");
+
+            listaPersona.Contains(persona2 + "");//Funciona con primitivas, no funciona con objetos compuestos.
+
+            foreach (string per in listaPersona)
+            {
+                label8.Text += "\n" + per;
+            }
+
+            string p = listaPersona.ElementAt(2);
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            usandoListas();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //label9.Text = (int.Parse(textBox1.Text) + int.Parse(textBox2.Text)) + "";
+            int n1, n2;
+            if (int.TryParse(textBox1.Text, out n1)) { //Si es convertible a numero
+                // el primer numero es valido
+                if (int.TryParse(textBox2.Text, out n2))
+                {
+                    // el segundo es válido
+                    label9.Text = (n1 + n2) + "";
+                }
+                else { label9.Text = "El segundo valor no es un entero."; }
+            }
+            else { label9.Text = "El primer valor no es un entero."; }
+
+            int contador = 10;
+            while (contador > 0) {
+                label9.Text += "\n" + "Hola";
+                contador--;
+            }
         }
     }
 
@@ -153,5 +211,9 @@ namespace EjemplosGraficos
         public int edad { get; set; }
         public double estatura { get; set; }
 
+        public override string ToString()
+        {
+            return $"Mi nombre es {nombre}, tengo {edad} años y mido {estatura} metros.";
+        }
     }
 }
